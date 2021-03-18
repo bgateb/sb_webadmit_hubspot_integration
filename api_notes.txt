@@ -8,7 +8,29 @@ https://sandbox.webadmit.org/api/v1/user_identities/407273/exports/627479
 Identity Export Files - Retreive unique file ID (id field):
 https://sandbox.webadmit.org/api/v1/user_identities/407273/export_files
 
+      Response:
+      {
+        "href": "/api/v1/user_identities/407273/export_files",
+        "export_files": [{
+            "id": 471349,
+            "href": "/api/v1/exports/627479/export_files/471349",
+            "export_id": 627479,
+            "status": "Available"
+        }]
+    }
+
 Export/Report Files (check status):
 https://sandbox.webadmit.org/api/v1/exports/627479/export_files/:export_file_id
+
+      Response:
+      {
+    "export_files": {
+        "id": 471349,
+        "href": "/api/v1/exports/627479/export_files/471349",
+        "export_id": 627479,
+        "status": "Available",
+        "download_url": "https://webadmit-qa.s3.amazonaws.com/export_files/reports/000/471/349/c69fcab2a52484071acceafc81208941_original.txt?AWSAccessKeyId=AKIAW6YGEJKFZXT45QHZ&Expires=1616089004&Signature=2M0XvLd1uuyCuz7Aoh7T5xHpwHU%3D&response-content-disposition=attachment%3B%20filename%3D%22SB_UKWN_BG_HUBSPOT_INTEGRATION_TEST.csv%22&response-content-type=text%2Fcsv%3Bcharset%3Diso-8859-1"
+    }
+}
 
 https://sandbox.webadmit.org/api/v1/exports/:export_id/export_files/:export_file_id
