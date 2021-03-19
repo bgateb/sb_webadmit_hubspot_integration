@@ -2,11 +2,16 @@ CRED 2020-2021 = 407273
 BG_HUBSPOT_TEST Export ID = 627479
 Export File ID = 471349
 
+Headers:
+-H x-api-key = :APIKEY
+
+
 URLs
 https://sandbox.webadmit.org/api/v1/user_identities/407273/exports/627479
 
 Identity Export Files - Retreive unique file ID (id field):
-https://sandbox.webadmit.org/api/v1/user_identities/407273/export_files
+curl https://sandbox.webadmit.org/api/v1/user_identities/407273/export_files
+-H x-api-key = APIKEY
 
       Response:
       {
@@ -21,6 +26,7 @@ https://sandbox.webadmit.org/api/v1/user_identities/407273/export_files
 
 Export/Report Files (check status):
 https://sandbox.webadmit.org/api/v1/exports/627479/export_files/:export_file_id
+-H x-api-key = APIKEY
 
       Response:
       {
